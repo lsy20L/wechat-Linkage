@@ -1,0 +1,47 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="hr2"></view>
+  <blcok class="information">
+    <view class="label" >分类：</view><view class="data">{{topicName}}</view>
+    </blcok>
+  <view class="hr1"></view>
+  <blcok class="information">
+    <view class="label">联系人：</view><view class="data">{{username}}</view>
+  </blcok>
+  <view class="hr1"></view>
+  <blcok class="information">
+    <view class="label">联系方式：</view>
+    <view class="buttons" style="display: flex;flex-direction: row;" wx:for="{{contactType}}"  bindtap="switchLabel" data-id="{{index}}" wx:key="id"  >
+      <button type="{{index==activeID?'primary':''}}" plain="true" class="item {{id!=0?'right':'left'}}">{{item}}</button>
+    </view>
+  </blcok>
+  <view class="hr1"></view>
+  <blcok class="information" >
+    <view class="label">{{contactType[activeID]}}号：</view>
+    <input name="number" type="{{activeID==2?'':'number'}}" placeholder="请输入{{contactType[activeID]}}号" 
+    bindinput="bindInputNumber"/>
+  </blcok>
+  <view class="hr2" ><text>帖子内容</text>
+  </view>
+  <blcok class="information">
+    <view class="label">标题：</view>
+    <input name="name" placeholder="4~20字的标题" bindinput="bindInputName" />
+  </blcok>
+  <view class="hr1"></view>
+  <view class="content">
+    <textarea name="content" focus="true" bindinput="bindInputValue"  placeholder="详细描述你的需求,禁止填写个人联系方式，禁止发布违反学校规定、涉嫌违法信息。" />
+  </view>
+  <view class="hr2" style="display: flex;flex-direction: column;padding-bottom: 30rpx;">
+    <text>上传图片，限6张以内。</text>
+    <text>我也不清楚支持什么格式。</text>
+  </view>
+
+  <view class="pic"  >
+    <view class="img" wx:for="{{files}}" wx:key="*this" bindtap="previewImage" >
+      <image src="{{item}}" id="{{item}}" ></image>
+    </view>
+    <image src="../../../static/images/imagefabu.png" bindtap="chooseImage"></image>
+  </view>
+  <view class="hr2"  style="padding-bottom: 240rpx;">
+    <button type="primary" bindtap="onPost">发布信息</button>
+  </view>
+</form>

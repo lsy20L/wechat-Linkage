@@ -1,0 +1,28 @@
+<video id="myVideo"   show-mute-btn="true"  title="{{video.videoName}}" 	show-screen-lock-button="{{true}}"
+enable-play-gesture="true" src="{{video.videoUrl}}" binderror="videoErrorCallback" ></video>
+<view class="information">
+  <text class="videoname">{{video.videoName}}</text>
+  <text style="position: absolute;right:49rpx;" bindtap="showChange">简介></text>
+  <text class="videointro" style="padding-top: 28rpx;padding-right: 28rpx;"wx:if="{{showflag}}">{{video.videoIntroduction}}</text>
+</view>
+<view class="hr2"></view>
+<view class="hint">
+  <text >评论留言</text>
+  <text class="add" bindtap="postComment">我要评论></text>
+</view>
+<view class="hr1" ></view>
+<view class="comments" wx:for="{{comments}}" wx:key="index">
+  <view class="comment">
+    <view class="user">
+      <image src="{{item.userImageUrl}}"></image>
+      <text >{{item.userName}}</text>
+    </view>
+    <view class="content">
+      <text>{{item.commentContent}}</text>
+    </view>
+    <view class="time">
+      <text>1分钟前</text>
+    </view>
+    <view class="hr1"></view>
+  </view>
+</view>

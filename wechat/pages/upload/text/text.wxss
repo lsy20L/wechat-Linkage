@@ -1,0 +1,76 @@
+
+blcok{
+  display: flex;
+  flex-direction: row;
+}
+
+.hr1{
+    width: 100%;
+    height: 1rpx;background-color: #f4f5f6;
+}
+.hr2{
+  width: 100%;
+  height: 58rpx;background-color: #f4f5f6;
+  padding-top:30rpx;
+  
+}
+.hr2 text{
+  padding-left: 27rpx;
+  font-size: smaller;
+  color:	#B0C4DE;
+}
+.label{
+  padding-left: 27rpx;
+  padding-top:30rpx;
+  padding-bottom:30rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: smaller;
+  width: 25%;
+}
+.data{
+  padding-left: 27rpx;
+  padding-bottom:30rpx;
+  padding-top:30rpx;
+  width: 75%;
+  font-size: smaller;
+}
+.buttons button{
+  margin-top: 27rpx;
+  padding-left: 1rpx;
+  padding-right: 1rpx;
+  height:54rpx;width:108rpx; font-size:smaller;
+  line-height: 55rpx;
+  border-radius: 5rpx;
+}
+.buttons .item.right{
+  margin-left: 30rpx;
+}
+.information input{
+  
+  padding-bottom:30rpx;
+  padding-top:30rpx;
+  font-size: smaller;
+}
+.content{
+  padding-top:30rpx;
+  padding-left: 27rpx;
+}
+.pic{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+image{
+  padding-top:20rpx;
+  padding-bottom:50rpx;
+  padding-left: 27rpx;
+  height: 162rpx;
+  width: 162rpx;
+}
+.hr2 button{
+
+  width: 60%;
+  top:180rpx;
+  border-radius: 60rpx;
+}

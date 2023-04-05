@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="upload-box">
+    <button type="primary"  class="video-upload-btn" bindtap="uploadvideo">视频上传</button>  
+    <button type="primary" class="text-upload-btn" bindtap="uploadtext">帖子上传</button>
+  </view>
+</view>

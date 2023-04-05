@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linkage.mapper.TopicMapper">
+<!--    List<TopicDto> getAllTopics(@Param("type")int type);-->
+    <select id="getAllTopics" resultType="com.linkage.dto.TopicDto">
+        select topicID,
+               topic_name,
+               topic_image_url
+        from t_topic
+        where topic_type = #{type};
+    </select>
+    <select id="getTopicNameByTopicID" resultType="java.lang.String">
+        select topic_name
+        from t_topic
+        where topicID=#{topicID}
+    </select>
+
+</mapper>

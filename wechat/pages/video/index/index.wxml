@@ -1,0 +1,17 @@
+<!-- 搜索框 -->
+<view class="search">
+  <view class="searchBg" >
+  <!-- 搜索图标 -->
+    <image src="../../../static/images/search.png" style="width:50rpx;height:50rpx" ></image>
+    <input placeholder="请输入想搜索的课程" bindinput="inputKeyword" type="text" />
+    <button bindtap="searchTap">搜索</button>
+  </view>
+</view>
+<!-- 列表元素 -->
+<view class="videoList" >
+  <view class="video" wx:for="{{videos}}" wx:key="index" >
+    <image bindtap="handlewatchtap" data-idx="{{item.videoID}}" src="{{item.videoImageUrl}}"></image>
+    <text class="name">{{item.videoName}}</text>
+    <text class="intro">{{item.videoIntroduction}}</text>
+  </view>
+</view>

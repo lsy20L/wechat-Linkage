@@ -1,0 +1,42 @@
+/* pages/luntan/luntan.wxss */
+/* 分类图标样式 */
+.index{
+  display: flex;flex-direction: row;flex-wrap: wrap;
+}
+.index-item{
+  width: 25%;text-align: center;font-size: 24rpx;margin: 8rpx 0;
+}
+/* 分割线样式 */
+.hr1{
+  width: 100%;height: 40rpx;background-color: #f4f5f6;
+}
+/* 用户信息样式 */
+.user{
+  display:flex;flex-direction: row;
+}
+.user image{
+  margin-left:27rpx;
+  margin-top:27rpx;
+  height: 54rpx;
+  width: 54rpx;
+  border-radius: 27rpx;
+}
+.user text{
+  padding-top: 35rpx;
+  font-size: 30rpx;
+  padding-left:15rpx;
+  color:#B0C4DE;
+}
+.content{
+  padding-left:80rpx;
+}
+.label{
+  padding-left:75rpx;
+}
+.label text{
+  font-size: 30rpx;
+  color:#B0C4DE;
+}
+.hr2{
+  width: 100%;height: 1rpx;background-color: #f4f5f6;
+}

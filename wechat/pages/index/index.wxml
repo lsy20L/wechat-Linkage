@@ -1,0 +1,47 @@
+<view class="container">
+<view class="search">
+    <navigator url="/pages/search/search" class="input">
+      <van-icon name="search"/>
+      <text class="txt">课程搜索, 共121个课程</text>
+    </navigator>
+</view>
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{ads}}" wx:key="id">
+      <block wx:if="{{item.adLink>0}}">
+        <navigator url="/pages/video/video/detail?id={{item.adLink}}">
+        <image src="{{item.adImageUrl}}" background-size="cover"></image>
+        </navigator>
+      </block>
+      <block wx:else>
+        <image src="{{item.adImageUrl}}" background-size="cover"></image>
+      </block>
+    </swiper-item>
+  </swiper>
+  <view class="m-menu">
+    <navigator class="item" url="/pages/video/topic/topic?id={{item.id}}" wx:for="{{topics}}" wx:key="topicID">
+      <image src="{{item.topicImageUrl}}" background-size="cover"></image>
+      <text>{{item.topicName}}</text>
+    </navigator>
+  </view>
+  <view class="a-section a-like" wx:if="{{videos.length > 0}}">
+    <view class="h">
+      <view class="title">
+        <view>
+          <navigator url="/pages/video/like/like">
+            <text class="txt">猜你喜欢</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <view class="b" >
+      <view class="item" wx:for="{{videos}}" wx:for-index="index" wx:for-item="item" wx:key="id" >
+      <navigator class="navi" url="../video/detail/detail?id={{item.videoID}}">
+        <image class="img" src="{{item.videoImageUrl}}"></image>
+        <text class="name">{{item.videoName}}</text>
+        <text class="intro">{{item.videoIntroduction}}</text>
+      </navigator>
+    </view>
+  </view>
+  
+</view>
+</view>

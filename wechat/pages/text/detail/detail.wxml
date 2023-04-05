@@ -1,0 +1,43 @@
+<!--pages/detail/detail.wxml-->
+<view class="hr1"></view>
+<view class="information">
+  <image src="{{text.userImageUrl}}"></image>
+  <text>{{text.userName}}</text>
+  <view>举报</view>
+</view>
+<view class="text">
+  <text class="name">{{text.textName}}</text>
+  <rich-text class="content" nodes="{{text.textContent}}"></rich-text>
+  <view class="pic" >
+    <view class="image"wx:for="{{text.textImageUrl}}" wx:key="index">
+      <image src="{{item}}"></image>
+    </view>
+  </view>
+  <text class="label">#{{text.topicName}}#</text>
+  <text class="hide" bindtap="showChange" >点击{{showflag?'隐藏':'查看'}}联系方式</text>
+  <view class="show" wx:if="{{showflag}}">
+    <text>联系人：{{text.userName}}</text>
+    <text>{{text.textContactType}}：{{text.textContactNumber}}</text>
+  </view>
+</view>
+<view class="hr2"></view>
+<view class="hint">
+  <text >评论留言</text>
+  <text class="add" bindtap="postComment">我要评论></text>
+</view>
+<view class="hr1" ></view>
+<view class="comments" wx:for="{{comments}}" wx:key="index">
+  <view class="comment">
+    <view class="user">
+      <image src="{{item.userImageUrl}}"></image>
+      <text >{{item.userName}}</text>
+    </view>
+    <view class="content" style="padding-left:80rpx;">
+      <text>{{item.commentContent}}</text>
+    </view>
+    <view class="time">
+      <text>1分钟前</text>
+    </view>
+    <view class="hr1"></view>
+  </view>
+</view>

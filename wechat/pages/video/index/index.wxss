@@ -1,0 +1,52 @@
+/* 搜索框样式 */
+.search{
+  display: flex;flex-direction: row;padding:10rpx;
+}
+.searchBg{
+  width:80%;
+  display: flex;flex-direction: flex;height: 60rpx;
+}
+.searchBg image{
+  margin:10rpx;
+}
+.searchBg input{
+  height: 60rpx;font-size: 30rpx;
+}
+.searchBg button{
+  position: absolute;right:20rpx;
+  font-size: 26rpx;font-weight: bold;
+  line-height: 60rpx;margin-left: 24rpx;
+  width: 130rpx;
+  text-align:center;border-radius: 2rpx;
+}
+/* 分割线样式 */
+.hr{
+  width: 100%;height: 1rpx;background-color: #f4f5f6;
+}
+
+/* 列表内部样式 */
+.videoList{
+  margin-left: 23rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+}
+.video{
+  padding-left: 12rpx;
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.video image{
+  width:336rpx;
+  height: 189rpx;
+}
+.name{
+  padding-top: 18rpx;
+  font-size:large;
+}
+.intro{
+  padding-top: 18rpx;
+  color:	#DCDCDC;
+}

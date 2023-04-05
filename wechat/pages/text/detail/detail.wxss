@@ -1,0 +1,95 @@
+/* pages/detail/detail.wxss */
+/* 分割线样式 */
+.hr1{
+  width: 100%;height: 1rpx;background-color: #f4f5f6;
+}
+.hr2{
+  width: 100%;height: 40rpx;background-color: #f4f5f6;
+}
+.information{
+  display: flex;flex-direction: row;
+}
+.information image{
+  margin-left:27rpx;
+  margin-top:27rpx;
+  height: 54rpx;
+  width: 54rpx;
+  border-radius: 27rpx;
+}
+.information text{
+  padding-top: 35rpx;
+  font-size: 30rpx;
+  padding-left:15rpx;
+  color:#B0C4DE;
+}
+.information view{
+  color:#B0C4DE;
+  right:27rpx;
+  font-weight: bold;
+  margin-top: 36rpx;
+  position: absolute;
+}
+.text{
+  margin-left:27rpx;
+  margin-top:27rpx;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+.pic{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+.pic image{
+  padding-top:20rpx;
+  height: 189rpx;
+  width: 189rpx;
+}
+.label{
+  font-size: 30rpx;
+  color:#B0C4DE;
+}
+.hide{
+  padding-bottom: 34rpx;
+  padding-top:34rpx;
+  padding-left:190rpx;
+  color:#B0C4DE;
+}
+.show{
+  display: flex;
+  flex-direction: column;
+}
+.hint{
+  margin-left:27rpx;
+  margin-top:27rpx;
+  margin-bottom: 30rpx;
+}
+.add{
+  color:#B0C4DE;
+  right:27rpx;
+  position: absolute;
+}
+.user{
+  display:flex;flex-direction: row;
+}
+.user image{
+  margin-left:27rpx;
+  margin-top:27rpx;
+  height: 54rpx;
+  width: 54rpx;
+  border-radius: 27rpx;
+}
+.user text{
+  padding-top: 35rpx;
+  font-size: 30rpx;
+  padding-left:15rpx;
+  color:#B0C4DE;
+}
+.time{
+  padding-left:75rpx;
+}
+.time text{
+  font-size: 30rpx;
+  color:#B0C4DE;
+}

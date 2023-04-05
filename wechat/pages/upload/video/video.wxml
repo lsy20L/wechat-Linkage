@@ -1,0 +1,39 @@
+<view class="hr"><text>视频上传</text>
+    <text>我也不清楚视频上传的大小范围是多少</text>
+</view>
+<view class="video_upload">
+    <view class="uploaded" wx:if="{{videoUrl}}">
+        <video  src="{{videoUrl}}"></video>
+    </view>
+    <view class="upload"  wx:else bindtap="chooseVideo" >
+        <image  class="myImg" src="../../../static/images/upload.png" />
+        <button type="primary">上传视频</button>
+    </view>
+</view>
+<view class="hr"><text>封面上传</text>
+    <text>我也不清楚图片上传的大小范围是多少</text>
+</view>
+<view class="video_image">
+    <view class="uploaded" wx:if="{{imageUrl}}">
+        <image src="{{imageUrl}}"></image>
+    </view>
+    <view class="upload"  wx:else bindtap="chooseImage" >
+        <image  class="myImg" src="../../../static/images/upload.png" />
+        <button type="primary">上传图片</button>
+    </view>
+</view>
+<view class="hr2"><text>视频信息</text>
+        <view class="content">
+            <view class="label">标题：</view>
+            <input name="name" bindinput="inputName" placeholder="4~10字的标题" />
+        </view>
+        <view class="hr1"></view>
+        <view class="content">
+            <view class="label">简介：</view>
+            <textarea name="introduction" bindinput="inputIntro" placeholder="视频简介" />
+        </view>
+        <view class="hr2"  style="padding-bottom: 240rpx;">
+            <button type="primary" bindtap="onPost">发布视频</button>
+        </view>
+</view>
+

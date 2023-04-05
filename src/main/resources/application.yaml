@@ -1,0 +1,54 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.143.184.134:3306/linkage?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+    username: root
+    password: Linkage..2022
+#    password: 123456
+  mvc:
+    servlet:
+      load-on-startup: 1
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    lazy-loading-enabled: true
+  mapper-locations: classpath:com.linkage.mapper/*.xml
+#  type-aliases-package: com.linkage.dto
+wx:
+    app-id: wx75b5af38818f2333 #微信小程序的appid
+    app-secret: 289374b153db43d847d2d9d98bea562f #微信小程序的Secret
+    mch-id: 111111
+    mch-key: xxxxxx
+    notify-url: http://www.example.com/wx/order/pay-notify
+    # 商户证书文件路径
+    # 请参考“商户证书”一节 https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=4_3
+    key-path: xxxxx
+    # 消息推送配置token
+    token:
+    # 消息推送配置AesKey
+    aes-key:
+  # 对象存储配置
+storage:
+  # 当前工作的对象存储模式，分别是local、aliyun
+  active: local
+  # 本地对象存储配置信息
+  local:
+    storagePath: storage
+    # 这个地方应该是wx模块的WxStorageController的fetch方法对应的地址
+#    address: http://43.143.184.134:8080/wx/upload/fetch/
+    # 图片访问的上一级网址
+    address:  http://localhost:8080/wx/upload/fetch/
+server:
+  ssl:
+    protocol: TLS
+    key-store: classpath:server.keystore
+    key-alias: tomcat
+    enabled: true
+    key-store-password: 123456
+    key-store-type: JKS
+

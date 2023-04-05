@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linkage.mapper.TextMapper">
+    <sql id="Base_Column_List">
+        textID,text_contact_type,text_contact_number,text_content,text_name,text_image_url,topicName,text_love_number,nick_name,avatar_url
+    </sql>
+<!--    List<TextDto> selectAll();-->
+    <select id="selectAll" resultType="com.linkage.dto.TextDto">
+        select
+        <include refid="Base_Column_List"/>
+        from t_text as a,
+             t_user as b,
+             t_topic as c
+        where a.userID=b.weixin_openid
+        and a.topicName=c.topic_name
+    </select>
+<!--    TextDto selectByTextID(@Param("textID") int textID);-->
+    <select id="selectByTextID" resultType="com.linkage.dto.TextDto">
+        select
+        <include refid="Base_Column_List"/>
+        from t_text as a,
+             t_user as b,
+            t_topic as c
+        where a.userID=b.weixin_openid
+        and a.textID=#{textID}
+        and a.topicName=c.topic_name
+    </select>
+<!--    List<TextDto> selectByUserID(@Param("userID")String userID);-->
+    <select id="selectByUserID" resultType="com.linkage.dto.TextDto">
+        select
+        <include refid="Base_Column_List"/>
+        from t_text as a,
+             t_user as b
+        where a.userID=b.weixin_openid
+          and a.userID=#{userID}
+    </select>
+<!--    List<TextDto> selectByTextKeyword(@Param("topicID")String topicID);-->
+    <select id="selectByTextKeyword" resultType="com.linkage.dto.TextDto">
+        select
+        <include refid="Base_Column_List"/>
+        from t_text as a,
+             t_user as b
+        where a.userID=b.weixin_openid
+          and a.topicID=#{topicID}
+    </select>
+    <select id="selectByTopicID" resultType="com.linkage.dto.TextDto">
+        select
+        <include refid="Base_Column_List"/>
+        from t_text as a,
+        t_user as b,
+        t_topic as c
+        where a.userID=b.weixin_openid
+        and a.topicName=c.topic_name
+        and c.topicID=#{topicID}
+    </select>
+    <insert id="addText">
+        insert into t_text values (#{textID},#{textName},#{textContent},#{textTopicName},#{textLoveNumber},#{userID},#{textContactType},#{textContactNumber},#{textImageUrl,typeHandler=com.linkage.mybatis.JsonStringArrayTypeHandler})
+    </insert>
+</mapper>

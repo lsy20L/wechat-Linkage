@@ -1,0 +1,76 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/text/index/index",
+    "pages/text/topic/topic",
+    "pages/text/detail/detail",
+    "pages/upload/index/index",
+    "pages/upload/video/video",
+    "pages/upload/text/text",
+    "pages/video/index/index",
+    "pages/video/detail/detail",
+    "pages/video/topic/topic",
+    "pages/video/like/like",
+    "pages/auth/login/login",
+    "pages/auth/accountLogin/accountLogin",
+    "pages/ucenter/index/index",
+    "pages/ucenter/info/info",
+    "pages/ucenter/video/video",
+    "pages/ucenter/text/text",
+    "pages/ucenter/share/share",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "Linkage",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#AB956D",
+    "color": "#666",
+    "list":[
+      {
+        "selectedIconPath": "/static/images/a-1.png",
+        "iconPath": "/static/images/a.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      }, {
+        "selectedIconPath": "/static/images/c-1.png",
+        "iconPath": "/static/images/c.png", 
+        "pagePath": "pages/text/index/index",
+        "text": "论坛"
+      },
+      {
+        "selectedIconPath": "/static/images/add.png",
+        "iconPath": "/static/images/add.png", 
+        "pagePath": "pages/upload/index/index",
+        "text": "发布"
+      },
+      {
+        "selectedIconPath": "/static/images/course-1.png",
+        "iconPath": "/static/images/course.png", 
+        "pagePath": "pages/video/index/index",
+        "text": "课程"
+      },
+      {
+        "selectedIconPath": "/static/images/d-1.png",
+        "iconPath": "/static/images/d.png", 
+        "pagePath": "pages/ucenter/index/index",
+        "text": "我的"
+      }
+    ] },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 100000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "usingComponents": {},  "sitemapLocation": "sitemap.json"
+}

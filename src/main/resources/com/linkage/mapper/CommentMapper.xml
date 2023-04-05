@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linkage.mapper.CommentMapper">
+<!--    List<CommentDto> getAllComments(@Param("typeID")int typeID,@Param("type")int type);-->
+    <select id="getAllComments" resultType="com.linkage.dto.CommentDto">
+        select nick_name,
+               avatar_url,
+               comment_content
+        from t_user as a,
+             t_comment as b
+        where b.typeID=#{typeID}
+        and b.type=#{type}
+        and b.userID=a.weixin_openid
+    </select>
+<!--        int addComment(Comment comment);-->
+    <insert id="addComment">
+        insert into t_comment values (null,#{typeID}, #{type},#{userID},#{commentContent})
+    </insert>
+</mapper>

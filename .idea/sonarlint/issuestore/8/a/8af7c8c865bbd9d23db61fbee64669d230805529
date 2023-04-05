@@ -1,0 +1,11 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(¼İŒ€şÿÿÿÿ
+@
+java:S1181"%Catch Exception instead of Throwable.(•”ø¾øÿÿÿÿ
+b
+java:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(ø™×
+>	java:S108")Either remove or fill this block of code.(ø™×
+U	java:S899";Do something with the "boolean" value returned by "delete".(Ø‰ ùÿÿÿÿ
+p
+java:S4042"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Ø‰ ùÿÿÿÿ8Ã¥”±0

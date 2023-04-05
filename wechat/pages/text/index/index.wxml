@@ -1,0 +1,27 @@
+<!-- 分类图标 -->
+<view class="index">
+  <block wx:for="{{topics}}" wx:key="index">
+    <navigator class="index-item" url="../topic/topic?id={{item.topicID}}">
+      <view><image src="{{item.topicImageUrl}}" data-idx="{{item.topicID}}" style="width: 86rpx;height:78rpx;" ></image></view>
+      <view>{{item.topicName}}</view>
+    </navigator>
+  </block>
+</view>
+<!-- 分割线 -->
+<view class="hr1"></view>
+<!-- 论坛内容 -->
+<view class="texts" wx:for="{{texts}}" wx:key="index">
+  <navigator class="texts" url="../detail/detail?id={{item.textID}}" >
+    <view class="user">
+      <image src="{{item.userImageUrl}}"></image>
+      <text >{{item.userName}}</text>
+    </view>
+    <view class="content">
+      <text>{{item.textName}}</text>
+    </view>
+    <view class="label">
+      <text>#{{item.topicName}}#</text>
+    </view>
+    <view class="hr2"></view>
+  </navigator>
+</view>

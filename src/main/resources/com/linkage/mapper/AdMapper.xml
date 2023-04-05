@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linkage.mapper.AdMapper">
+<!--    List<AdDto> getAllAds();-->
+    <select id="getAllAds" resultType="com.linkage.dto.AdDto">
+        select * from t_ad
+    </select>
+</mapper>
